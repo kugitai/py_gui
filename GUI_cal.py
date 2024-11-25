@@ -11,6 +11,8 @@ window = sg.Window('計算機',layout)
 while True:
     try:
         event,value = window.read()
+        if event == sg.WINDOW_CLOSED:
+            break
         d = 0
         if event == '+':
             d = (float(value['num1'])+float(value['num2']))
@@ -24,8 +26,6 @@ while True:
         if event == 'AC':
             window['num1'].update('')
             window['num2'].update('')
-        if event == sg.WINDOW_CLOSED:
-            break
     except ZeroDivisionError:
         window['output'].update('0では割れません')
     except ValueError:
