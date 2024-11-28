@@ -1,6 +1,5 @@
 import PySimpleGUI as sg
 import random
-import time
 
 layout = [[sg.Text('スロット')],
         [sg.Text(key='out1'),sg.Text(key='out2'),sg.Text(key='out3')],
