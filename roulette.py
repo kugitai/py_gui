@@ -7,10 +7,12 @@ layout = [[sg.Text('スロット')],
         [sg.Button('スタート')]]
 
 window = sg.Window('ルーレット',layout)
-start = [False,False,False]
-out1 = 0
-out2 = 0
-out3 = 0
+#スロットの動作中か否か（falseは停止、trueは動作）
+start = [False,False,False] 
+#out1~3は初期値(同じ数字にならないようにランダムにしている)
+out1 = random.randint(1,7)
+out2 = random.randint(1,7)
+out3 = random.randint(1,7)
 under_number = 1
 while True:
     event,value = window.read(timeout=100)
