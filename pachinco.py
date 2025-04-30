@@ -31,21 +31,13 @@ while True:
         hit_intv = hit_count - prev_hit_count  # 大当たり間隔を計算
     else:
         for reel in ['out1', 'out2', 'out3']:
-        # ランダムな範囲を生成 (1～9の中でランダムな開始と終了)
-            start = random.randint(1, 9)
-            end = random.randint(1, 9)
-        
-        # 範囲が逆転している場合を修正
-            if start > end:
-                start, end = end, start
-        
+
         # ランダムな範囲から値を選択
-            random_value = random.randint(start, end)
+            random_value = random.randint(1,9)
         
         # ウィンドウにリールの値を更新
             window[reel].update(random_value)
             window.refresh()  # 更新を即座に反映
-            sg.time.sleep(0.5)  # 順番に表示
 
 
     window['count'].update(count)
