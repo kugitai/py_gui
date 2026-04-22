@@ -1,4 +1,4 @@
-import PySimpleGUI as sg
+import FreeSimpleGUI as sg
 layout = [[sg.Text(key='output')],
           [sg.Button('AC')],
           [sg.Text('一つ目の数字は？')],
