@@ -24,6 +24,7 @@ while True:
             d = (float(value['num1'])/float(value['num2']))
         window['output'].update(f'答えは{d}です')
         if event == 'AC':
+            window['output'].update('')
             window['num1'].update('')
             window['num2'].update('')
     except ZeroDivisionError:
