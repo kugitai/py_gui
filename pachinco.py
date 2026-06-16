@@ -23,20 +23,20 @@ while True:
     #大当たり時の処理
     if (hit_num == rand_num):
         for reel, value in zip(['out1', 'out2', 'out3'], ['7', '7', '7']):
-            window[reel].update(value)
+            window[reel].update(value,text_color=("red"))
             window.refresh()  # 更新を即座に反映
             sg.time.sleep(0.5)  # 順番に表示
         prev_hit_count = hit_count  # 現在の大当たり回転数を前回値に保存
         hit_count = count  # 現在の回転数を最後の大当たり回転数に更新
         hit_intv = hit_count - prev_hit_count  # 大当たり間隔を計算
+        sg.time.sleep(0.5)
     else:
         for reel in ['out1', 'out2', 'out3']:
-
         # ランダムな範囲から値を選択
             random_value = random.randint(1,9)
         
         # ウィンドウにリールの値を更新
-            window[reel].update(random_value)
+            window[reel].update(random_value,text_color=("white"))
             window.refresh()  # 更新を即座に反映
 
 
