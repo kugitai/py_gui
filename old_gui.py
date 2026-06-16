@@ -1,4 +1,4 @@
-import PySimpleGUI as sg
+import FreeSimpleGUI as sg
 import datetime
 layout = [[sg.Text('ここに年齢が出ます',key='output')],
           [sg.Text('生年月日をお願いします')],

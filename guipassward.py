@@ -1,4 +1,4 @@
-import PySimpleGUI as sg
+import FreeSimpleGUI as sg
 layout = [[sg.Text(' パスワードを設定してください')],
           [sg.Input(key='inputps')],
           [sg.Text('パスワードを入力してください')],
